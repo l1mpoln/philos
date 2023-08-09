@@ -6,7 +6,7 @@
 /*   By: vkuzmin <zxcmasterass@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:25:48 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/08/09 18:29:32 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/08/09 19:06:11 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	init_philos(t_data *data)
 	return (init_mutex(data));
 }
 
-int init_data(t_data *data, int argc, char **argv)
+int	init_data(t_data *data, int argc, char **argv)
 {
 	data->num_of_philo = ft_atoi(argv[1]);
 	data->t2d = ft_atoi(argv[2]);
