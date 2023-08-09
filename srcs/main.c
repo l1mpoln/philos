@@ -6,15 +6,15 @@
 /*   By: vkuzmin <zxcmasterass@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:15:49 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/08/09 01:20:57 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/08/09 18:28:39 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/philos.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_data  *data;
+	t_data	*data;
 
 	if (argc < 5 || argc > 6 || !ft_parse(argv))
 		return (ft_error("Error with params"));

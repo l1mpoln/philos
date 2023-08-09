@@ -6,7 +6,7 @@
 /*   By: vkuzmin <zxcmasterass@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:25:48 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/08/09 01:20:51 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/08/09 18:29:32 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,30 @@ int init_data(t_data *data, int argc, char **argv)
 	if (argc == 6)
 		data->must_eat = ft_atoi(argv[5]);
 	return (1);
+}
+
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int	res;
+	int	sign;
+
+	i = 0;
+	res = 0;
+	sign = 1;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i + 1] == '-' || str[i + 1] == '+')
+			return (0);
+		if (str[i] == '-')
+			sign = sign * -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i++] - 48;
+	}
+	return (res * sign);
 }

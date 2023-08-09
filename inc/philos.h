@@ -6,12 +6,12 @@
 /*   By: vkuzmin <zxcmasterass@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:15:25 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/07/24 02:08:58 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/08/09 18:40:35 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
+#ifndef PHILOS_H
+# define PHILOS_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -20,8 +20,8 @@
 # include <sys/time.h>
 # include <string.h>
 
-typedef struct s_philo	t_philo;
 typedef struct s_data	t_data;
+typedef struct s_philo	t_philo;
 
 struct	s_philo
 {
@@ -60,8 +60,8 @@ void		philo_time_to(int time);
 int			free_data(t_data *data);
 
 //init
-int 		init_philos(t_data *data);
-int 		init_data(t_data *data, int argc, char **argv);
+int			init_philos(t_data *data);
+int			init_data(t_data *data, int argc, char **argv);
 
 //threads
 int			start_threads(t_data *data, int argc);

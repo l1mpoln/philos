@@ -6,7 +6,7 @@
 /*   By: vkuzmin <zxcmasterass@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 01:35:01 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/08/09 01:21:03 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/08/09 18:29:02 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	*monitoring(void *thread)
 			&& !philo->data->death_flag)
 		{
 			printf("%lld\t%d\tdied\n", get_time() - philo->data->start_time,
-				   philo->id + 1);
+				philo->id + 1);
 			philo->data->death_flag = 1;
 		}
 		pthread_mutex_unlock(&philo->data->print_mutex);
@@ -72,7 +72,7 @@ void	*start_routine(void *thread)
 		pthread_mutex_lock(&philo->data->forks[philo->left_fork]);
 		if (!philo->data->death_flag)
 			printf("%lld\t%d\thas taken a fork\n",
-				   get_time() - philo->data->start_time, philo->id + 1);
+				get_time() - philo->data->start_time, philo->id + 1);
 		usleep(philo->data->t2d * 1000);
 	}
 	return (NULL);

@@ -6,12 +6,11 @@
 /*   By: vkuzmin <zxcmasterass@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 01:46:54 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/08/09 01:20:41 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/08/09 18:28:07 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/philos.h"
-
 
 void	philo_takes_forks(t_philo *philo)
 {
@@ -20,10 +19,10 @@ void	philo_takes_forks(t_philo *philo)
 	pthread_mutex_lock(&philo->data->print_mutex);
 	if (!philo->data->death_flag)
 		printf("%lld\t%d\thas taken a fork\n",
-			   get_time() - philo->data->start_time, philo->id + 1);
+			get_time() - philo->data->start_time, philo->id + 1);
 	if (!philo->data->death_flag)
 		printf("%lld\t%d\thas taken a fork\n",
-			   get_time() - philo->data->start_time, philo->id + 1);
+			get_time() - philo->data->start_time, philo->id + 1);
 	pthread_mutex_unlock(&philo->data->print_mutex);
 }
 
@@ -51,7 +50,7 @@ void	philo_sleeping(t_philo *philo)
 	pthread_mutex_lock(&philo->data->print_mutex);
 	if (!philo->data->death_flag)
 		printf("%lld\t%d\tis sleeping\n",
-			   get_time() - philo->data->start_time, philo->id + 1);
+			get_time() - philo->data->start_time, philo->id + 1);
 	pthread_mutex_unlock(&philo->data->print_mutex);
 	philo_time_to(philo->data->t2s);
 }
@@ -61,6 +60,6 @@ void	philo_thinking(t_philo *philo)
 	pthread_mutex_lock(&philo->data->print_mutex);
 	if (!philo->data->death_flag)
 		printf("%lld\t%d\tis thinking\n",
-			   get_time() - philo->data->start_time, philo->id + 1);
+			get_time() - philo->data->start_time, philo->id + 1);
 	pthread_mutex_unlock(&philo->data->print_mutex);
 }
